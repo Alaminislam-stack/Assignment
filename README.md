@@ -1,73 +1,82 @@
-# React + TypeScript + Vite
+# Form Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A powerful, schema-driven dynamic form builder built with **React**, **TypeScript**, and **Vite**. This project demonstrates advanced form handling techniques including conditional logic, field repeaters, asynchronous validation, and autosave.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Schema-Driven Rendering**: Forms are generated dynamically from a JSON schema.
+- **Conditional Logic**: Show or hide fields based on the values of other fields.
+- **Async Validation**: Perform server-side or timed validation (e.g., checking if a username is taken).
+- **Field Repeaters**: Support for dynamic lists where users can add or remove multiple instances of a field group.
+- **Autosave**: Automatically saves form progress to local storage or a mock API.
+- **Responsive Design**: Styled with **Tailwind CSS** for a modern, mobile-first experience.
+- **Storybook Integration**: Explore and test individual components in isolation.
+- **Unit & Integration Testing**: Built-in testing suite using **Vitest** and **Playwright**.
 
-## React Compiler
+## 🛠️ Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Component Documentation**: [Storybook](https://storybook.js.org/)
+- **Testing**: [Vitest](https://vitest.dev/) & [Playwright](https://playwright.dev/)
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1.  **Clone the repository:**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+    ```bash
+    git clone https://github.com/Alaminislam-stack/Assignment.git
+    cd Assignment
+    ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 💻 Usage
+
+### Development Server
+
+Run the app in development mode:
+
+```bash
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Storybook
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Launch the Storybook environment to view components:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run storybook
 ```
+
+### Build
+
+Create a production-ready build:
+
+```bash
+npm run build
+```
+
+### Testing
+
+Run unit tests with Vitest:
+
+```bash
+npm test
+```
+
+## 📂 Project Structure
+
+- `src/components`: Reusable UI and form components.
+- `src/pages`: Application views (Home, Form Builder, etc.).
+- `src/stories`: Storybook configurations and component stories.
+- `src/utils`: Helper functions and validation logic.
+
+## 📄 License
+
+This project is for assignment purposes. Use it as a reference for dynamic form implementations.
