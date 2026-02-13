@@ -4,7 +4,6 @@ import NotFound from "./pages/NotFound";
 import Form from "./pages/Form";
 
 function App() {
-
   return (
     <BrowserRouter>
       <Routes>

@@ -18,7 +18,6 @@ function AsyncValidation() {
     if (formData.username.length >= 3) {
       const timer = setTimeout(async () => {
         setIsValidating(true);
-        // Simulate API call
         await new Promise((resolve) => setTimeout(resolve, 1000));
 
         if (formData.username.toLowerCase() === "admin") {
