@@ -1,4 +1,4 @@
-interface FormSchema {
+export interface FormSchema {
   id: string;
   version: number;
   title: string;
@@ -222,7 +222,7 @@ export const autosaveFormSchema: FormSchema = {
   ],
 };
 
-interface FormField {
+export interface FormField {
   name: string;
   label: string;
   type: string;
